@@ -10,6 +10,7 @@ const modelValue = ref('')
     v-bind="$attrs"
     p="x-4 y-2"
     w="200px"
+    mx-auto
     mt-3
     text="center"
     bg="transparent"

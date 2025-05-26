@@ -13,20 +13,19 @@
 
 ## 🏆特性
 
-- 🦄使用 Vite 构建工具快速构建项目
-- 🛠️集成 Vue DevTools，可视化项目，助力开发和测试
-- 🥑使用 ESLint、Stylelint 代码规范保证代码质量
-- 📦拆箱即用，结合了 Vue3、Vite、Alova 和 TypeScript
-- 🕸自动配置路由，使用 unplugin-vue-router 插件自动生成路由
-- 🥝自动引入，使用 unplugin-auto-import 插件实现组件自动引入
-- ✨集成 UnoCSS，提供轻量级的样式解决方案
-- 👀使用 Onu UI，一个基于UnoCSS的UI组件库
-- 🍀集成 Vitest，用于项目的单元测试
-- 🧰使用 VueUse 函数库辅助开发
-- 💀使用 v3-directives 指令库辅助开发
-- 🙈使用 Alova 实现网络请求
-- 🍍使用 Pinia 进行状态管理
-- 📌使用 husky、lint-staged 规范git commit
+- 🦄 使用 Vite 构建工具快速构建项目
+- 🛠️ 集成 Vue DevTools，可视化项目，助力开发和测试
+- 🥑 使用 ESLint 代码规范保证代码质量
+- 📦 拆箱即用，结合了 Vue3、Vite、Alova 和 TypeScript
+- 🕸 自动配置路由，使用 unplugin-vue-router 插件自动生成路由
+- 🥝 自动引入，使用 unplugin-auto-import 插件实现组件自动引入
+- ✨ 集成 UnoCSS，提供轻量级的样式解决方案
+- 🍀 集成 Vitest，用于项目的单元测试
+- 🧰 使用 VueUse 函数库辅助开发
+- 💀 使用 v3-directives 指令库辅助开发
+- 🙈 使用 Alova 实现网络请求
+- 🍍 使用 Pinia 进行状态管理
+- 📌 使用 husky、lint-staged 规范git commit
 
 ## 📚学习
 
@@ -63,12 +62,8 @@
 
 ### 规范相关
 
-- [🐶 husky | 🐶 husky (typicode.github.io)](https://typicode.github.io/husky/)
 - [lint-staged: 🚫💩 — Run linters on git staged files (github.com)](https://github.com/okonet/lint-staged)
 - [检测并修复 JavaScript 代码中的问题。 - ESLint - 插件化的 JavaScript 代码检查工具](https://zh-hans.eslint.org/)
-- [Home | Stylelint中文文档 | Stylelint中文网](https://www.stylelint.com.cn/)
-- [Commitizen by commitizen](https://github.com/commitizen/cz-cli)
-- [cz-emoji git commit emoji Message](https://github.com/ngryman/cz-emoji)
 
 ### 单元测试
 
@@ -83,7 +78,7 @@
 克隆项目到本地：
 
 ```bash
-npx degit ileostar/vitesse-star 你的项目名称  # If there is no npx, npm i -g npx first
+npx degit eonova/vitesse-star 你的项目名称  # If there is no npx, npm i -g npx first
 ```
 
 进入项目目录：
@@ -104,18 +99,16 @@ pnpm install # If there is no pnpm, npm i -g pnpm first
 pnpm dev
 ```
 
-打开浏览器，访问 <http://localhost:3891> 即可查看项目运行效果。
+打开浏览器，访问 <http://localhost:9536> 即可查看项目运行效果。
 
 ## 📝目录结构
 
 ```text
 ├── github                // 存放github的workfow
-├── .husky                // git hook预处理
 ├── .vscode               // vscode的配置
 │   ├── extensions.json   // 插件设置
 │   ├── setting.json      // IDE设置
-├── public
-│   ├── vite.svg          // 网站logo
+├── public                // 网站资源
 ├── src
 │   ├── api               // 接口目录，使用alova接口函数
 │   ├── assets            // 静态资源文件夹，如图片、字体等
@@ -123,16 +116,14 @@ pnpm dev
 │   ├── composables       // 存放状态逻辑的函数
 │   ├── helper            // pinia-auto-refs插件自动生成目录
 │   ├── pages             // 视图目录，存放页面级组件
-│   ├── store             // Vuex状态管理文件夹
+│   ├── store             // Pinia状态管理文件夹
 │   ├── styles            // 样式文件夹，存放全局样式和公共样式
 │   ├── App.vue           // 根组件
 │   └── main.ts           // 项目入口文件
 ├── test                  // 单元测试
-├── types                 // 类型文件
 ├── .editorconfig         // IDE配置文件
 ├── .gitignore            // git忽略文件
 ├── .npmrc                // npm管理配置
-├── .stylelintrc.json     // stylelintrc文件
 ├── .env                  // 配置环境
 ├── .env.production       // 生产配置环境
 ├── .env.development      // 开发配置环境

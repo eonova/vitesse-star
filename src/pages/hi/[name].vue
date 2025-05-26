@@ -1,24 +1,24 @@
 <script setup lang="ts">
-const props = defineProps<{ name: string }>()
+const params = useRoute('/hi/[name]').params
 const router = useRouter()
 const { updateCount, count } = useStore('home')
 </script>
 
 <template>
   <div>
-    <div i-twemoji-alien inline-block text-4xl />
+    <div i-twemoji-alien text-4xl inline-block />
     <p>
-      Hi, {{ props.name }}
+      Hi, {{ params.name }}
     </p>
     <p>{{ count }}</p>
     <p text-sm op50>
       <em>Dynamic route!</em>
     </p>
     <div>
-      <button m-3 mt-8 text-sm btn @click="updateCount">
+      <button text-sm m-3 mt-8 btn @click="updateCount">
         add
       </button>
-      <button m-3 mt-8 text-sm btn @click="router.back()">
+      <button text-sm m-3 mt-8 btn @click="router.back()">
         Back
       </button>
     </div>

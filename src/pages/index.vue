@@ -22,11 +22,9 @@ function go(): void {
 
 <template>
   <TheStudy />
-  <h2 m-3>
-    <o-text class="read-the-docs" font="bold" text-6 font-bold size="lg" gradient="linear-gradient(to right, #0c02ba, #00ff95)">
-      {{ msg }}
-    </o-text>
-  </h2>
+  <div font="bold" text-6 font-bold mx-auto gradient="linear-gradient(to right, #0c02ba, #00ff95)">
+    {{ msg }}
+  </div>
   <div class="card">
     <p color-gray>
       Click on the  logos to learn more
@@ -38,14 +36,15 @@ function go(): void {
       @keydown.enter="go"
     />
     <div>
-      <o-button
-        type="info"
+      <button
+        type="submit"
         mt-2
+        class="btn-primary btn-soft btn"
         :disabled="!name"
         @click="go"
       >
         Go
-      </o-button>
+      </button>
     </div>
   </div>
 </template>

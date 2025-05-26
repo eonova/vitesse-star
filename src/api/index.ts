@@ -1,32 +1,47 @@
 // 案例学习：https://alova.js.org/zh-CN/tutorial/best-practice/manage-apis
 import type { AlovaMethodCreateConfig, Method } from 'alova'
 import { createAlova } from 'alova'
+import adapterFetch from 'alova/fetch'
 import VueHook from 'alova/vue'
-import GlobalFetch from 'alova/GlobalFetch'
 
-// create alova instance
+/**  创建 Alova 实例 */
 export const instance = createAlova({
   baseURL: import.meta.env.VITE_ALOVA_BASE_URI,
   statesHook: VueHook,
-  requestAdapter: GlobalFetch(),
+  requestAdapter: adapterFetch(),
   timeout: 50000,
+  cacheFor: {
+    GET: {
+      mode: 'restore',
+      expire: 1000,
+    },
+  },
   beforeRequest(method) { // 这里设置请求拦截器
     // 请求头中添加Authorization认证信息
-    method.config.headers.Authorization = localStorage.getItem('Authorization') ?? ''
+    const curToken = localStorage.getItem('Authorization')
+    method.config.headers.Authorization = `Bearer ${curToken}`
   },
   responded: { // 这里设置响应拦截器
-    onSuccess: async (response: { status: number; statusText: string | undefined; json: () => any }, _method: any) => {
+    onSuccess: async (response, _method) => {
+      if (response.status === 401) {
+        // 这里可以做一些操作，例如跳转到登录页
+        const router = useRouter()
+        setTimeout(() => {
+          localStorage.removeItem('Authorization')
+          router.push('/login')
+        }, 1000)
+      }
       if (response.status >= 400)
         throw new Error(response.statusText)
 
       const json = await response.json()
-      if (response.status !== 200)
+      if (response.status > 400)
         throw new Error(json.message)
 
       if (json.code !== 200)
         throw new Error(json.message)
 
-      return json.data
+      return json
     },
     onError: (err, _method) => {
       // eslint-disable-next-line no-console
@@ -42,7 +57,7 @@ export const instance = createAlova({
 interface Data {
   [index: string]: unknown
 }
-type Config = AlovaMethodCreateConfig<unknown, unknown, RequestInit, Headers> | undefined
+type Config = AlovaMethodCreateConfig<any, Data, unknown> | undefined
 
 interface Http {
   get: (

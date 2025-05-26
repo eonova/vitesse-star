@@ -1,5 +1,5 @@
 <template>
-  <nav mt-6 inline-flex gap-2 text-xl>
+  <nav text-xl mt-6 inline-flex gap-2>
     <div flex="~ items-center" m-t-20 justify-center class="logo-link">
       <a href="https://vitejs.dev" target="_blank">
         <img src="@/assets/images/vite.svg" class="logo" alt="Vite logo">
