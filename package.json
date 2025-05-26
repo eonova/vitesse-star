@@ -12,7 +12,7 @@
     "check:knip": "knip",
     "check:spelling": "cspell -c .cspell.json --no-progress --no-summary --no-must-find-files --unique",
     "check:style": "stylelint \"src/**/*.(vue|scss|css)\" --fix",
-    "type-check": "vue-tsc --noEmit",
+    "typecheck": "vue-tsc --noEmit",
     "test": "vitest --mode development",
     "prepare": "simple-git-hooks",
     "deps:up": "taze major -I"
