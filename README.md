@@ -104,7 +104,7 @@ pnpm dev
 ## 📝目录结构
 
 ```text
-├── github                // 存放github的workfow
+├── github                // 存放github的workflow
 ├── .vscode               // vscode的配置
 │   ├── extensions.json   // 插件设置
 │   ├── setting.json      // IDE设置
