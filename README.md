@@ -6,7 +6,7 @@
   <a href="https://vitesse-star.netlify.app/" target="_blank">
   👀 在线预览
   </a>|
-  <a href="https://github.com/ileostar/vitesse-star#%EF%B8%8F%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B">
+  <a href="https://github.com/eonova/vitesse-star#%EF%B8%8F%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B">
   ✌️ 快速开始
   </a>
 </p>
@@ -58,7 +58,7 @@
 ### 工具函数
 
 - [VueUse中文文档 | VueUse中文文档 (vueusejs.com)](http://www.vueusejs.com/)
-- [v3-directives 自定义指令库](https://github.com/ileostar/v3-directives)
+- [v3-directives 自定义指令库](https://github.com/eonova/v3-directives)
 
 ### 规范相关
 

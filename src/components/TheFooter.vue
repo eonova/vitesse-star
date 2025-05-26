@@ -7,7 +7,7 @@
     <a
       i-carbon-logo-github icon-btn
       rel="noreferrer"
-      href="https://github.com/ileostar/vitesse-star"
+      href="https://github.com/eonova/vitesse-star"
       target="_blank"
       title="GitHub"
     />
